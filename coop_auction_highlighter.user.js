@@ -4,7 +4,7 @@
 // @namespace    HN67
 // @description  Adds XKI's Card Co-op logo beside members nations during an auction
 // @author       HN67
-// @downloadURL  todo: replace with github raw link (and also consider namespace above)
+// @downloadURL  https://github.com/HN67/xki-cards/raw/master/coop_auction_highlighter.user.js
 // @noframes
 // @match        https://www.nationstates.net/*page=deck*/*card=*
 // @match        https://www.nationstates.net/*card=*/*page=deck*
