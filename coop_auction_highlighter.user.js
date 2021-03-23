@@ -68,7 +68,7 @@ function GM_addStyle(style) {
 					);
 				} else {
 					el.parentNode.parentNode.classList.remove(
-						"hn67-class-xki-card_coop"
+						"hn67-class-xki-cardcoop"
 					);
 				}
 			});
