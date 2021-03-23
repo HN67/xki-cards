@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Co-op Auction Highlighter
-// @version      0.1
+// @version      0.2
 // @namespace    HN67
 // @description  Adds XKI's Card Co-op logo beside members nations during an auction
 // @author       HN67
