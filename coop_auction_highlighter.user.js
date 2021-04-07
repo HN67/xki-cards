@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Co-op Auction Highlighter
-// @version      0.1
+// @version      0.2
 // @namespace    HN67
 // @description  Adds XKI's Card Co-op logo beside members nations during an auction
 // @author       HN67
@@ -68,8 +68,21 @@ function GM_addStyle(style) {
 					);
 				} else {
 					el.parentNode.parentNode.classList.remove(
-						"hn67-class-xki-card_coop"
+						"hn67-class-xki-cardcoop"
 					);
+				}
+			});
+        document
+			.querySelectorAll("a.nlink:not(.hn67-class-xki-cardcoop-parsed)")
+			.forEach(function (el, i) {
+				const canonical_nname = el
+					.getAttribute("href")
+					.replace(/^nation=/, "");
+				if (guild_members_array.includes(canonical_nname)) {
+					const new_el = document.createElement("span");
+					new_el.classList.add("hn67-class-xki-cardcoop-inline");
+					el.parentNode.insertBefore(new_el, el);
+					el.classList.add("hn67-class-xki-cardcoop-parsed");
 				}
 			});
 	};
@@ -134,6 +147,12 @@ background-position: left;
 tr > td.hn67-class-xki-cardcoop:nth-child(5) {
 background-image: linear-gradient(270deg, rgba(255,255,255,0), rgb(255,255,255) 50px, rgba(255, 255, 255, 0) 100px), ` + image + `;
 background-position: right;
+}
+.hn67-class-xki-cardcoop-inline {
+background-repeat: no-repeat;
+background-image: ` + image + `;
+background-size: contain;
+padding-left: 1.5em;
 }
 `);
 	}
