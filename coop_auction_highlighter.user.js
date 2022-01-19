@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Co-op Auction Highlighter
-// @version      0.2
+// @version      0.3
 // @namespace    HN67
 // @description  Adds XKI's Card Co-op logo beside members nations during an auction
 // @author       HN67
@@ -48,7 +48,7 @@ function GM_addStyle(style) {
 (async function () {
 	"use strict";
 
-	const source_sheet = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSem15AVLXgdjxWBZOnWRFnF6NwkY0gVKPYI8aWuHJzlbyILBL3o1F5GK1hSK3iiBlXLIZBI5jdpkVr/pub?gid=916202163&single=true&output=tsv"
+	const source_sheet = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQolEKIC63tiAK1qpAGac6e-eT99-rjFl6oI8UYf0Rt2CVwWp9KsjOPk8R65O8SS_1yS2Af2fBfR7ly/pub?gid=916202163&single=true&output=tsv"
 
 	const update_auctiontable = async function () {
 		const guild_members_array = (
